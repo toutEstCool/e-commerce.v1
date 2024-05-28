@@ -15,9 +15,5 @@ func NewMySqlStorage(config mysql.Config) (*sql.DB, error) {
 		log.Fatal(err)
 	}
 
-	if err := db.Ping(); err != nil {
-		log.Fatal(err)
-	}
-
 	return db, nil
 }
